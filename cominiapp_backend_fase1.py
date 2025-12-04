@@ -6,11 +6,25 @@ import uuid
 from datetime import datetime
 
 # --- CONFIGURACIÓN DE FIRESTORE REST API (TU PROYECTO) ---
-FIREBASE_PROJECT_ID = 'cominiapp-11363' 
-API_KEY = 'AIzaSyAKXvLBPdrR3QQS0cXnOrrJ4-ifV-2PBKY'
+from google.cloud import firestore
 
-# URL base de la API REST de Firestore
-BASE_API_URL = f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT_ID}/databases/(default)/documents"
+# Define los nombres de las colecciones que usaremos en Firestore
+DRIVERS_COLLECTION = 'drivers'
+REQUESTS_COLLECTION = 'requests'
+
+# Inicializa el cliente. Se autentica automáticamente con la clave de Render.
+db = firestore.Client()
+
+
+from google.cloud import firestore
+
+# Define los nombres de las colecciones que usaremos en Firestore
+DRIVERS_COLLECTION = 'drivers'
+REQUESTS_COLLECTION = 'requests'
+
+# Inicializa el cliente. Se autentica automáticamente con la clave de Render.
+db = firestore.Client()
+
 
 # --- 1. Configuración de la Aplicación Flask ---
 app = Flask(__name__)
