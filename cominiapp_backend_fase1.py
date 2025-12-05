@@ -121,7 +121,9 @@ def handle_taxi_request():
         return jsonify({'success': False, 'message': f'Error al crear solicitud: {e}'}), 500
 
 
-# --- 5. EJECUCIÓN SECUENCIAL (CRUCIAL) ---
+# --- # --- 5. EJECUCIÓN SECUENCIAL (CRUCIAL) ---
 if __name__ == '__main__':
     # Ejecuta el backend en el puerto 5000 (Render lo mapeará al puerto 80)
-    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000), debug=True)
+    # app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000), debug=True)
+    pass # o simplemente dejarlo vacío
+    
