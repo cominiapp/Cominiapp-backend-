@@ -2,3 +2,4 @@ Flask
 flask-cors
 requests
 google-cloud-firestore
+gunicorn
