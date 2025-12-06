@@ -3,3 +3,4 @@ flask-cors
 requests
 google-cloud-firestore
 gunicorn
+psycopg2-binary
